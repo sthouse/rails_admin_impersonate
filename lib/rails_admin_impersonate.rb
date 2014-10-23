@@ -27,8 +27,7 @@ module RailsAdmin
 
         register_instance_option :controller do
           Proc.new do
-            sign_in @object
-            redirect_to "/"
+            redirect_to "/impersonate/user/#{ @object.id }"
           end
         end
 
